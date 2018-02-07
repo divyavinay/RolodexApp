@@ -47,6 +47,26 @@ class PageCell: UICollectionViewCell {
         return textView
     }()
     
+    var email: UITextView = {
+        let textView = UITextView()
+        textView.font = UIFont.systemFont(ofSize: 12)
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.textAlignment = .left
+        textView.isEditable = false
+        textView.isScrollEnabled = false
+        return textView
+    }()
+    
+    var company: UITextView = {
+        let textView = UITextView()
+        textView.font = UIFont.systemFont(ofSize: 12)
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.textAlignment = .left
+        textView.isEditable = false
+        textView.isScrollEnabled = false
+        return textView
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupLayout()
@@ -71,12 +91,18 @@ class PageCell: UICollectionViewCell {
         firstName.topAnchor.constraint(equalTo: topImageContainerView.bottomAnchor).isActive = true
         firstName.leftAnchor.constraint(equalTo: leftAnchor, constant: 24).isActive = true
         
-        addSubview(lastName)
-        lastName.topAnchor.constraint(equalTo: topImageContainerView.bottomAnchor).isActive = true
-        lastName.leftAnchor.constraint(equalTo: firstName.rightAnchor, constant: 24).isActive = true
+        addSubview(email)
+        email.topAnchor.constraint(equalTo: firstName.bottomAnchor).isActive = true
+        email.leftAnchor.constraint(equalTo: leftAnchor, constant: 24).isActive = true
+        email.rightAnchor.constraint(equalTo: rightAnchor, constant: -10).isActive = true
+        
+        addSubview(company)
+        company.topAnchor.constraint(equalTo: email.bottomAnchor).isActive = true
+        company.leftAnchor.constraint(equalTo: leftAnchor, constant: 24).isActive = true
+        company.rightAnchor.constraint(equalTo: rightAnchor, constant: -10).isActive = true
       
         addSubview(descriptionTextView)
-        descriptionTextView.topAnchor.constraint(equalTo: topImageContainerView.bottomAnchor, constant: 30).isActive = true
+        descriptionTextView.topAnchor.constraint(equalTo: company.bottomAnchor, constant: 0).isActive = true
         descriptionTextView.leftAnchor.constraint(equalTo: leftAnchor, constant: 24).isActive = true
         descriptionTextView.rightAnchor.constraint(equalTo: rightAnchor, constant: -24).isActive = true
         descriptionTextView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0).isActive = true

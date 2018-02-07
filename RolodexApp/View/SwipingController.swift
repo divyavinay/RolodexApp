@@ -56,13 +56,15 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? PageCell
         cell?.descriptionTextView.text = "Bio: \(cards[indexPath.row].bio)" 
-        cell?.firstName.text = "First name: \(cards[indexPath.row].firstName)"
-        cell?.lastName.text = "Last name: \(cards[indexPath.row].lastName)"
+        cell?.firstName.text = "Name: \(cards[indexPath.row].firstName) \(cards[indexPath.row].lastName)"
+        cell?.email.text = "Email: \(cards[indexPath.row].email)"
+        cell?.company.text = "Company: \(cards[indexPath.row].company)"
         dataProvider.downloadImage(urlString: cards[indexPath.row].avatar) { (image) in
             DispatchQueue.main.async {
                 cell?.imageView.image = image
             }
         }
+        
         guard let pageCell = cell else {
             return PageCell()
         }
