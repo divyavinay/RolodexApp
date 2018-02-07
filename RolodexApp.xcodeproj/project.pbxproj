@@ -8,24 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		15DA11F2202A7B1F0031A90C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DA11F1202A7B1F0031A90C /* AppDelegate.swift */; };
-		15DA11F4202A7B1F0031A90C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DA11F3202A7B1F0031A90C /* ViewController.swift */; };
-		15DA11F7202A7B1F0031A90C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15DA11F5202A7B1F0031A90C /* Main.storyboard */; };
 		15DA11F9202A7B1F0031A90C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15DA11F8202A7B1F0031A90C /* Assets.xcassets */; };
 		15DA11FC202A7B1F0031A90C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15DA11FA202A7B1F0031A90C /* LaunchScreen.storyboard */; };
 		15DA1205202A7BCC0031A90C /* IndividualCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DA1204202A7BCC0031A90C /* IndividualCardModel.swift */; };
 		15DA1208202A7E940031A90C /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DA1207202A7E940031A90C /* DataProvider.swift */; };
+		15DA1213202A9CC70031A90C /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DA1211202A9CC70031A90C /* PageCell.swift */; };
+		15DA1214202A9CC70031A90C /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DA1212202A9CC70031A90C /* SwipingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		15DA11EE202A7B1F0031A90C /* RolodexApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RolodexApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15DA11F1202A7B1F0031A90C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		15DA11F3202A7B1F0031A90C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		15DA11F6202A7B1F0031A90C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15DA11F8202A7B1F0031A90C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15DA11FB202A7B1F0031A90C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15DA11FD202A7B1F0031A90C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15DA1204202A7BCC0031A90C /* IndividualCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualCardModel.swift; sourceTree = "<group>"; };
 		15DA1207202A7E940031A90C /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		15DA1211202A9CC70031A90C /* PageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		15DA1212202A9CC70031A90C /* SwipingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +58,10 @@
 		15DA11F0202A7B1F0031A90C /* RolodexApp */ = {
 			isa = PBXGroup;
 			children = (
+				15DA1215202A9D1A0031A90C /* View */,
 				15DA1206202A7E840031A90C /* DataProvider */,
 				15DA1203202A7B2D0031A90C /* Model */,
 				15DA11F1202A7B1F0031A90C /* AppDelegate.swift */,
-				15DA11F3202A7B1F0031A90C /* ViewController.swift */,
-				15DA11F5202A7B1F0031A90C /* Main.storyboard */,
 				15DA11F8202A7B1F0031A90C /* Assets.xcassets */,
 				15DA11FA202A7B1F0031A90C /* LaunchScreen.storyboard */,
 				15DA11FD202A7B1F0031A90C /* Info.plist */,
@@ -84,6 +83,15 @@
 				15DA1207202A7E940031A90C /* DataProvider.swift */,
 			);
 			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		15DA1215202A9D1A0031A90C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				15DA1211202A9CC70031A90C /* PageCell.swift */,
+				15DA1212202A9CC70031A90C /* SwipingController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +155,6 @@
 			files = (
 				15DA11FC202A7B1F0031A90C /* LaunchScreen.storyboard in Resources */,
 				15DA11F9202A7B1F0031A90C /* Assets.xcassets in Resources */,
-				15DA11F7202A7B1F0031A90C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,24 +165,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15DA11F4202A7B1F0031A90C /* ViewController.swift in Sources */,
+				15DA1213202A9CC70031A90C /* PageCell.swift in Sources */,
 				15DA11F2202A7B1F0031A90C /* AppDelegate.swift in Sources */,
 				15DA1208202A7E940031A90C /* DataProvider.swift in Sources */,
 				15DA1205202A7BCC0031A90C /* IndividualCardModel.swift in Sources */,
+				15DA1214202A9CC70031A90C /* SwipingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		15DA11F5202A7B1F0031A90C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				15DA11F6202A7B1F0031A90C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		15DA11FA202A7B1F0031A90C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
