@@ -17,7 +17,6 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         fetchData { (cards) in
             self.cards = cards
             DispatchQueue.main.async {
